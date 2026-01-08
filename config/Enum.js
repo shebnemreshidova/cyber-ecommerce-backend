@@ -10,5 +10,7 @@ module.exports={
         
 
 
-    }
+    },
+    PASS_LENGTH:8,
+    SUPER_ADMIN_ROLE:"SUPER_ADMIN"
 }

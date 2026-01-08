@@ -25,7 +25,7 @@ router.post('/add', async function (req, res) {
             createdBy: req.body.user?._id
         });
         await category.save();
-        res.json(Response.successResponse({ success: true }));
+        res.status(Enum.HTTP_CODES.CREATED).json(Response.successResponse({ success: true }));
     } catch (error) {
         let errorResponse = Response.errorResponse(error);
         res.status(errorResponse.code).json(errorResponse);
